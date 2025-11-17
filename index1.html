@@ -4,39 +4,100 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Курс «Танцуй уверенно где угодно и когда угодно» — Юлия КокСта</title>
-<meta name="description" content="Проект «Танцуй уверенно где угодно и когда угодно» — онлайн‑курс Jazz‑Funk от Юлии КокСта. 6 модулей, доступ навсегда, сертификат." />
+<meta name="description" content="Проект «Танцуй уверенно где угодно и когда угодно» — онлайн-курс Jazz-Funk от Юлии КокСта. 6 модулей, доступ навсегда, сертификат." />
 <style>
   :root{
-    --bg:#0f0a1a;
+    --bg:#453c5d;
     --text:#ffffff;
-    --muted:rgba(255,255,255,0.75);
+    --muted:rgba(255,255,255,0.78);
     --muted2:rgba(255,255,255,0.6);
-    --card:rgba(255,255,255,0.06);
-    --line:rgba(255,255,255,0.12);
-    --accent:#c7a4ff;
-    --grad1:#ff4da6;
-    --grad2:#9b5cff;
+    --card:rgba(0,0,0,0.16);
+    --line:rgba(255,255,255,0.18);
+    --accent:#d2c1fd;
+    --grad1:#c76cff;
+    --grad2:#d2c1fd;
     --headerH:56px;
   }
   @media(min-width:768px){ :root{ --headerH:68px; } }
   html{scroll-behavior:smooth;}
-  body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;line-height:1.55;padding-top:var(--headerH);}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+    line-height:1.55;
+    padding-top:var(--headerH);
+  }
   a{color:var(--text);text-decoration:none}
   a.uline{ text-decoration:underline; text-decoration-color:var(--accent); text-underline-offset:4px; }
   .wrap{max-width:1120px;margin:0 auto;padding:0 16px;box-sizing:border-box;}
-  header{position:fixed;top:0;left:0;right:0;z-index:9999;backdrop-filter:saturate(120%) blur(8px);background:rgba(15,10,26,.88);border-bottom:1px solid var(--line);}
-  .bar{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;height:var(--headerH);box-sizing:border-box;gap:12px;}
+  header{
+    position:fixed;
+    top:0;left:0;right:0;
+    z-index:9999;
+    backdrop-filter:saturate(120%) blur(8px);
+    background:rgba(15,10,26,.88);
+    border-bottom:1px solid var(--line);
+  }
+  .bar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 16px;
+    height:var(--headerH);
+    box-sizing:border-box;
+    gap:12px;
+  }
   .brand{font-weight:800;letter-spacing:.2px;white-space:nowrap;}
   .nav{display:none;gap:24px;font-size:14px;color:var(--muted);}
   .nav a:hover{color:var(--text);}
-  .pill{display:none;font-size:13px;color:var(--text);border:1px solid var(--line);background:var(--card);padding:6px 10px;border-radius:999px;white-space:nowrap}
-  .hamb{display:inline-flex;width:40px;height:40px;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:12px;color:var(--muted);background:transparent;touch-action:manipulation;}
-  .drawer{display:none;position:fixed;top:var(--headerH);left:0;right:0;z-index:9998;border-top:1px solid var(--line);background:rgba(15,10,26,.98);max-height:calc(100vh - var(--headerH));overflow:auto;}
+  .pill{
+    display:none;
+    font-size:13px;
+    color:var(--text);
+    border:1px solid var(--line);
+    background:var(--card);
+    padding:6px 10px;
+    border-radius:999px;
+    white-space:nowrap
+  }
+  .hamb{
+    display:inline-flex;
+    width:40px;height:40px;
+    align-items:center;justify-content:center;
+    border:1px solid var(--line);
+    border-radius:12px;
+    color:var(--muted);
+    background:transparent;
+    touch-action:manipulation;
+  }
+  .drawer{
+    display:none;
+    position:fixed;
+    top:var(--headerH);left:0;right:0;
+    z-index:9998;
+    border-top:1px solid var(--line);
+    background:rgba(15,10,26,.98);
+    max-height:calc(100vh - var(--headerH));
+    overflow:auto;
+  }
   .drawer .wrap{display:grid;gap:8px;padding:12px 16px;}
-  .drawer a{padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--card);}
-  .backdrop{display:none;position:fixed;inset:0;z-index:9990;background:rgba(0,0,0,.4);}
+  .drawer a{
+    padding:12px;
+    border:1px solid var(--line);
+    border-radius:12px;
+    background:var(--card);
+  }
+  .backdrop{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:9990;
+    background:rgba(0,0,0,.4);
+  }
   body.nav-open .drawer{display:block;}
   body.nav-open .backdrop{display:block;}
+
   /* hero */
   .hero{padding:48px 0 24px;}
   .grid{display:grid;gap:24px;}
@@ -44,30 +105,148 @@
   .accent{color:var(--accent);}
   .sub{margin:10px 0 0 0;color:var(--muted);font-size:15px}
   .p{color:var(--muted);max-width:640px;}
-  .badges{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;font-size:14px;}
-  .badge{border:1px solid var(--line);border-radius:18px;background:var(--card);padding:12px;}
-  .cta{display:flex;flex-direction:column;gap:12px;margin-top:18px;}
-  .btn{display:inline-block;text-align:center;padding:12px 18px;border-radius:18px;font-weight:700;border:1px solid var(--line);}
-  .btn-grad{border:none;background:linear-gradient(90deg,var(--grad1),var(--grad2));}
+  .badges{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-top:16px;
+    font-size:14px;
+  }
+  .badge{
+    border:1px solid var(--line);
+    border-radius:18px;
+    background:var(--card);
+    padding:12px;
+  }
+  .cta{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-top:18px;
+  }
+  .btn{
+    display:inline-block;
+    text-align:center;
+    padding:12px 18px;
+    border-radius:18px;
+    font-weight:700;
+    border:1px solid var(--line);
+  }
+  .btn-grad{
+    border:none;
+    background:linear-gradient(90deg,var(--grad1),var(--grad2));
+  }
   .btn:hover{opacity:.95}
-  .poster{aspect-ratio:16/9;border:1px solid var(--line);border-radius:24px;background:var(--card);display:flex;align-items:center;justify-content:center;color:var(--muted2);}
+  .poster{
+    aspect-ratio:16/9;
+    border:1px solid var(--line);
+    border-radius:24px;
+    background:var(--card);
+    overflow:hidden;
+  }
+  .poster img{width:100%;height:100%;object-fit:cover;display:block;}
+
   section{padding:40px 0;border-top:1px solid var(--line);}
   h2{font-size:22px;margin:0 0 16px 0;}
   .cards{display:grid;gap:12px;}
-  .card{border:1px solid var(--line);border-radius:16px;background:var(--card);padding:14px;}
+  .card{
+    border:1px solid var(--line);
+    border-radius:16px;
+    background:var(--card);
+    padding:14px;
+  }
   .cols-2{grid-template-columns:1fr;}
   .cols-3{grid-template-columns:1fr;}
   .cols-4{grid-template-columns:1fr;}
   .ol{list-style:decimal;padding-left:20px;display:grid;gap:12px;}
   .price-grid{display:grid;gap:14px;}
-  .price{border:1px solid var(--line);border-radius:22px;background:var(--card);padding:16px;}
+  .price{
+    border:1px solid var(--line);
+    border-radius:22px;
+    background:var(--card);
+    padding:16px;
+  }
   .price .title{font-weight:800}
   .price .amount{font-size:22px;margin-top:4px}
-  .details{border:1px solid var(--line);border-radius:16px;background:var(--card);padding:12px;}
-  .faq details{border:1px solid var(--line);border-radius:16px;background:var(--card);padding:12px;}
+  .details{
+    border:1px solid var(--line);
+    border-radius:16px;
+    background:var(--card);
+    padding:12px;
+  }
+  .faq details{
+    border:1px solid var(--line);
+    border-radius:16px;
+    background:var(--card);
+    padding:12px;
+  }
   footer{border-top:1px solid var(--line);padding:28px 0;}
   .muted{color:var(--muted2)}
-  /* desktop */
+
+  .about-main{padding:16px 0;}
+  .about-main p{color:var(--muted);}
+  .about-read-more{
+    display:inline-block;
+    margin:6px 0 10px 0;
+    font-weight:600;
+    font-size:14px;
+    color:var(--accent);
+    text-decoration:underline;
+    text-underline-offset:3px;
+  }
+  .about-more p{margin-top:8px;}
+  .about-facts{margin:10px 0 0 0;padding-left:18px;color:var(--muted);}
+  .about-facts li{margin-bottom:4px;}
+
+  /* Блок "Что такое Jazz-Funk?" — карточка с фото */
+  .about-jazz{
+    padding:0;
+    overflow:hidden;
+    display:flex;
+    align-items:stretch;
+    justify-content:center;
+  }
+  .about-jazz-inner{
+    width:100%;
+    border-radius:16px;
+    overflow:hidden;
+    aspect-ratio:4/5; /* стабильная рамка */
+    background:var(--card);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .about-jazz-inner img{
+    width:100%;
+    height:100%;
+    object-fit:contain; /* без обрезки, всё фото умещается */
+    display:block;
+  }
+
+  /* accordion for program */
+  .accordion{display:grid;gap:10px;}
+  .accordion details{
+    border:1px solid var(--line);
+    border-radius:16px;
+    background:var(--card);
+    padding:8px 12px;
+  }
+  .accordion details[open]{border-color:var(--accent);}
+  .accordion summary{
+    list-style:none;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    font-weight:600;
+  }
+  .accordion summary::-webkit-details-marker{display:none;}
+  .accordion-title{font-size:15px;}
+  .accordion-icon{font-size:18px;color:var(--accent);margin-left:8px;}
+  .accordion-body{margin-top:8px;color:var(--muted);font-size:14px;}
+  .accordion-body ul{margin:4px 0 8px 18px;padding:0;}
+  .accordion-body li{margin-bottom:4px;}
+
   @media(min-width:768px){
     .nav{display:flex}
     .pill{display:inline-block}
@@ -123,11 +302,20 @@
   <section class="hero">
     <div class="wrap grid cols-2">
       <div>
-        <h1 class="h1">Поймай плавность и раскованность в движениях с <span class="accent">Jazz‑Funk</span></h1>
-        <p class="sub">Онлайн‑курс «Танцуй уверенно где угодно и когда угодно» от <a class="uline" href="https://t.me/Yulia_KokSta" target="_blank" rel="noopener">Юлии КокСта</a>.</p>
+        <h1 class="h1">Поймай плавность и раскованность в движениях с <span class="accent">Jazz-Funk</span></h1>
+        <p class="sub">
+          Онлайн-курс «Танцуй уверенно где угодно и когда угодно» от
+          <a class="uline" href="https://t.me/Yulia_KokSta" target="_blank" rel="noopener">Юлии КокСта</a>.
+        </p>
         <div class="badges">
-          <div class="badge"><strong>200 минут знаний</strong><div class="muted">Уровень: Лёгкий</div></div>
-          <div class="badge"><strong>Доступ навсегда</strong><div class="muted">Сертификат</div></div>
+          <div class="badge">
+            <strong>200 минут знаний</strong>
+            <div class="muted">Уровень: Лёгкий</div>
+          </div>
+          <div class="badge">
+            <strong>Доступ навсегда</strong>
+            <div class="muted">Сертификат</div>
+          </div>
         </div>
         <div class="cta">
           <a class="btn btn-grad" href="#pricing">Купить курс</a>
@@ -135,83 +323,268 @@
         </div>
       </div>
       <div>
-        <div class="poster">Превью курса / постер</div>
+        <div class="poster">
+          <img src="5.jpg" alt="Скидка 20% при быстрой заявке" />
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- About -->
+  <!-- О ТРЕНЕРЕ -->
   <section id="about">
     <div class="wrap grid cols-2">
-      <div class="card">
-        <h2>О тренере — <a class="uline" href="https://t.me/Yulia_KokSta" target="_blank" rel="noopener">Юлия КокСта @Yulia_KokSta</a></h2>
-        <ul>
-          <li>Танцор; кандидат в мастера спорта по художественной гимнастике</li>
-          <li>Создатель проекта «Танцуй уверенно где угодно и когда угодно»</li>
-          <li>Опыт преподавания офлайн и онлайн; сотни учеников</li>
+      <div class="about-main">
+        <h2>О тренере и методе</h2>
+        <p>
+          Привет! Меня зовут Юлия КокСта и танцы — это не просто хобби, а моя жизнь.
+          С самого детства была в центре внимания на всех праздниках, где с радостью показывала свои танцевальные номера.
+        </p>
+        <a href="#" class="about-read-more">Читать полностью</a>
+        <div class="about-more" hidden>
+          <p>
+            Помню, как в возрасте пяти лет я впервые вышла на сцену на утреннике в детском саду.
+            Сердце колотилось от волнения, но как только заиграла музыка, весь страх исчез.
+            Я танцевала так, будто весь мир замер, и только я одна существовала в этот момент.
+            Эта страсть к танцам осталась со мной навсегда.
+          </p>
+          <p>
+            Далее моя “танцевальная карьера” плавно перешла в спорт — художественную гимнастику.
+            Семь лет оттачивала свои навыки, выступала на соревнованиях и получала удовольствие от того,
+            как красиво можно соединить танец и спорт.
+          </p>
+          <p>
+            Все же со временем поняла, что мне не хватает свободы самовыражения.
+            Я решила вернуться к современному танцу, который позволил мне быть более креативной и импровизировать.
+            Это было как возвращение домой.
+          </p>
+          <p>
+            К преподаванию пришла, когда переехала в новый город в 2024 году.
+            Здесь столкнулась с проблемой: не оказалось групп по джаз-фанк и подобным направлениям,
+            которые меня так привлекали. Вместо того чтобы смириться с этим, решила взять ситуацию в свои руки
+            и стать тренером сама! Это было непросто: я долго искала подходящее помещение, проводила занятия
+            в фитнес-клубах и танцевальных школах, чуть позже стала разрабатывать программу занятий и искать
+            первых своих учеников.
+          </p>
+          <p>
+            И вот, спустя несколько месяцев упорного труда, первые ученики пришли на занятия.
+            Я помню их глаза, полные ожидания и немного страха. Мы вместе открывали для себя мир танца,
+            и с каждым занятием их уверенность росла.
+          </p>
+          <p>
+            С первого занятия ученики говорили, что им нравится мой стиль и подача.
+            Поэтому я решила дать возможность получить всё, что вы ожидаете от занятия танцами, в доступном формате
+            в любом уголке страны. Моя цель — дать возможность танцевать, импровизировать и чувствовать себя свободно.
+          </p>
+          <p>
+            За время работы я провела более 100 мастер-классов, помогла ученикам развить пластику
+            и уверенность в себе, дала понимание ритма и музыкальности в танце,
+            научила импровизировать и получать настоящее удовольствие от процесса.
+          </p>
+          <p>
+            Моя коронная фраза на занятиях: «Вот мы и Бейонсе». Ей не так уж и сложно стать в танце —
+            начните занятия, и вы поймёте почему.
+          </p>
+          <p>
+            Верю, что танец — это не только физическая активность, но и способ самовыражения,
+            выпуск непрожитых эмоций. Танец помогает лучше понять себя и окружающий мир.
+            И если после занятия вы не почувствуете улыбку на лице — мы вернём вам деньги!
+            Это моя гарантия того, что каждое занятие будет наполнено радостью и позитивом.
+          </p>
+          <p>
+            Я приглашаю вас открыть новую грань себя, зарядиться энергией и освободить «эмоциональную чашу» внутри.
+            Мы вместе создадим пространство, где каждая сможет быть собой и танцевать как никогда.
+            Танцы — это путь к свободе!
+          </p>
+        </div>
+        <ul class="about-facts">
+          <li>7 лет спорта в художественной гимнастике</li>
+          <li>7 лет занятий современными танцами</li>
+          <li>10 постановочных хореографий</li>
+          <li>100+ учеников во Владимирской области</li>
+          <li>Метод: база → ритм → импровизация → свой танец (90% практики, 10% теории)</li>
         </ul>
-        <p class="p">Как не бояться проявляться и танцевать в удовольствие? Курс для тех, кто стесняется заниматься в группе и считает, что «не умеет двигаться». Через женственность и базу из «3‑х» упражнений начнёте танцевать красиво и импровизировать.</p>
       </div>
-      <div class="card">
-        Иногда самые светлые идеи рождаются из боли. Я — <a class="uline" href="https://t.me/Yulia_KokSta" target="_blank" rel="noopener">Юлия Кокурятова («КокСта»)</a>. Сцена была моей жизнью, но из‑за здоровья я на 18 лет оставила любимое дело. Переехав, не нашла танцев, которых жаждала душа — и создала их сама. Так родился проект «Танцуй уверенно…» — из веры, что танец возвращает тебя настоящую.
+
+      <!-- ЗДЕСЬ БЫЛ ТЕКСТ "Что такое Jazz-Funk?" — теперь тут фото в рамке -->
+      <div class="card about-jazz">
+        <div class="about-jazz-inner">
+          <img src="jazz-funk.jpg" alt="Jazz-Funk — стиль, который объединяет джаз, фанк и современную хореографию" />
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Benefits -->
+  <!-- После курса вы получите -->
   <section id="benefits">
     <div class="wrap">
       <h2>После курса вы получите</h2>
       <div class="cards cols-2">
-        <div class="card">Чувство освобождения и эмоциональной разрядки</div>
-        <div class="card">Прилив энергии и бодрости — психологическая свежесть</div>
-        <div class="card">Чувство радости и улыбка на лице</div>
-        <div class="card">Уверенность в себе и своём теле, рост самооценки</div>
-        <div class="card">Ощущение команды и единомышленников</div>
-        <div class="card">Чувство достижения и прогресса: «у меня получилось!»</div>
-        <div class="card">Чувство привлекательности и сексуальности</div>
-        <div class="card">Творческая самореализация и самовыражение</div>
-        <div class="card">Поймать момент — полное погружение без лишних мыслей</div>
+        <div class="card">Освобождение и эмоциональную разрядку</div>
+        <div class="card">Прилив энергии и бодрости — психологическую свежесть</div>
+        <div class="card">Уверенность в себе и теле, рост самооценки</div>
+        <div class="card">Творческое самовыражение и свой WOW-эффект</div>
       </div>
       <div class="muted" style="margin-top:10px">6 обучающих модулей</div>
     </div>
   </section>
 
-  <!-- Program (5 levels) -->
+  <!-- Программа курса — аккордеон 5 уровней -->
   <section id="program">
     <div class="wrap">
       <h2>Программа курса — 5 уровней</h2>
-      <div class="cards cols-3">
-        <div class="card" style="text-align:center">База Jazz‑Funk</div>
-        <div class="card" style="text-align:center">Музыкальность</div>
-        <div class="card" style="text-align:center">Техника и пластика</div>
-        <div class="card" style="text-align:center">Освоение импровизации</div>
-        <div class="card" style="text-align:center">Создание собственного танца</div>
+      <div class="accordion">
+        <details open>
+          <summary>
+            <span class="accordion-title">Уровень 1. БАЗА JAZZ-FUNK: чувствуй тело и энергию</span>
+            <span class="accordion-icon">+</span>
+          </summary>
+          <div class="accordion-body">
+            <p><strong>Время:</strong> 35 минут</p>
+            <p><strong>Что изучаем:</strong></p>
+            <ul>
+              <li>Объединяем джаз и фанк — основа стиля.</li>
+              <li>Изоляция: движение отдельными частями тела.</li>
+              <li>Волны, баланс, контроль.</li>
+              <li>Грув, пружина и «скок» — ощущение ритма и «кача».</li>
+              <li>Первые элементы паппинга и вэйвинга.</li>
+              <li>Простые связки и работа под счёт.</li>
+            </ul>
+            <p><strong>Формат и материалы:</strong></p>
+            <ul>
+              <li>5 видеоуроков по 10–12 минут.</li>
+              <li>Разминка + закрепление под трек.</li>
+              <li>Мини-комбо для самостоятельной практики.</li>
+              <li>PDF-памятка «Как чувствовать тело в ритме».</li>
+            </ul>
+            <p><strong>Треки:</strong> Dua Lipa, Doja Cat, Bruno Mars.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <span class="accordion-title">Уровень 2. МУЗЫКАЛЬНОСТЬ И РИТМ: танцуй вместе с музыкой</span>
+            <span class="accordion-icon">+</span>
+          </summary>
+          <div class="accordion-body">
+            <p><strong>Время:</strong> 30 минут</p>
+            <p>Музыкальность — это не просто следование ритму, а душа jazz-funk.</p>
+            <p><strong>С чем работаем:</strong></p>
+            <ul>
+              <li>Работа с битом, счётом и синкопами.</li>
+              <li>Акценты: как отражать звуки телом.</li>
+              <li>Задержки, опережения, паузы.</li>
+              <li>Эмоциональная окраска движений.</li>
+            </ul>
+            <p><strong>Что входит:</strong></p>
+            <ul>
+              <li>4 видеоурока с примерами на разных жанрах.</li>
+              <li>Упражнения «найди акцент» и «поймай паузу».</li>
+              <li>Тренировка «Тело = инструмент музыки».</li>
+              <li>PDF-файл с описанием каждого пункта.</li>
+            </ul>
+            <p><strong>Треки:</strong> R&amp;B, поп, соул.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <span class="accordion-title">Уровень 3. ТЕХНИКА И ПЛАСТИКА: контроль и выразительность</span>
+            <span class="accordion-icon">+</span>
+          </summary>
+          <div class="accordion-body">
+            <p><strong>Время:</strong> 40 минут</p>
+            <p><strong>Состав:</strong></p>
+            <ul>
+              <li>Работа стопы (point/flex), баланс, линии тела.</li>
+              <li>Контраст: скорость, сила, фиксации.</li>
+              <li>Волны, полицентрия (движения разными частями тела одновременно).</li>
+              <li>Переходы между позами.</li>
+              <li>Управление импульсом: движение изнутри.</li>
+              <li>Создание плавных связок.</li>
+            </ul>
+            <p><strong>Что входит:</strong></p>
+            <ul>
+              <li>5 видеоуроков (техника + комбо).</li>
+              <li>Видеоразбор движений преподавателем.</li>
+              <li>PDF-файл с описанием техники.</li>
+            </ul>
+            <p><strong>Задание:</strong> «Мягкость и мощь в одном теле».</p>
+            <p><strong>Треки:</strong> Beyoncé.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <span class="accordion-title">Уровень 4. ИМПРОВИЗАЦИЯ И СОБСТВЕННЫЙ ТАНЕЦ: твоя свобода</span>
+            <span class="accordion-icon">+</span>
+          </summary>
+          <div class="accordion-body">
+            <p><strong>Время:</strong> 30 минут</p>
+            <p><strong>Состав:</strong></p>
+            <ul>
+              <li>5 шагов к импровизации без страха.</li>
+              <li>Создание собственного мини-танца.</li>
+              <li>Работа с образом и эмоцией.</li>
+              <li>Финальный перформанс — ваш WOW-эффект.</li>
+            </ul>
+            <p><strong>Что входит:</strong></p>
+            <ul>
+              <li>Видеоуроки + домашнее задание: снять свой танец.</li>
+              <li>Примеры импровизаций от преподавателя.</li>
+              <li>PDF-файл с описанием шагов импровизации.</li>
+            </ul>
+            <p><strong>Треки:</strong> на выбор — от Beyoncé до любимого трека участницы.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <span class="accordion-title">ПРЕМИУМ-уровень 5. ХОРЕОГРАФИЯ ДЛЯ СЦЕНЫ — твой готовый номер</span>
+            <span class="accordion-icon">+</span>
+          </summary>
+          <div class="accordion-body">
+            <p><strong>Время:</strong> 40 минут</p>
+            <p><strong>Что делаем:</strong></p>
+            <ul>
+              <li>Создаём полноценную постановку под конкретный трек.</li>
+              <li>Разучиваем, репетируем, отрабатываем эмоцию и подачу.</li>
+            </ul>
+            <p><strong>Онлайн-формат:</strong></p>
+            <ul>
+              <li>Обзор хореографии (по частям) — 10 минут.</li>
+              <li>Разбор движений — 15–20 минут.</li>
+              <li>Финальная репетиция под музыку — 10–12 минут.</li>
+            </ul>
+            <p>Результат: готовый номер для праздника, вечеринки или съёмки.</p>
+          </div>
+        </details>
       </div>
     </div>
   </section>
 
-  <!-- Pricing -->
+  <!-- Тарифы -->
   <section id="pricing">
     <div class="wrap">
       <h2>Выбрать курс — 3 тарифа</h2>
       <div class="price-grid">
         <div class="price">
           <div class="title">ТАРИФ «С НУЛЯ»</div>
-          <div class="amount">2 690 ₽</div>
+          <div class="amount">2 690 ₽</div>
           <ul>
             <li>✔ Доступ к базовым урокам (2–3 недели)</li>
-            <li>✔ Рабочая тетрадь и чек‑листы</li>
+            <li>✔ Рабочая тетрадь и чек-листы</li>
             <li>✔ Общий чат учеников</li>
             <li>✔ Техническая поддержка</li>
             <li class="muted">✖ Обратная связь, куратор, доп. материалы</li>
           </ul>
-          <div style="margin-top:12px"><a class="btn btn-grad" href="#apply">Выбрать</a></div>
+          <div style="margin-top:12px">
+            <a class="btn btn-grad" href="#apply">Выбрать</a>
+          </div>
         </div>
         <div class="price" style="border-width:2px;border-color:var(--accent)">
           <div class="muted" style="color:var(--accent);font-size:12px">ВЫБОР ПО УМОЛЧАНИЮ</div>
           <div class="title">ТАРИФ «ПРОФИ»</div>
-          <div class="amount">4 590 ₽</div>
+          <div class="amount">4 590 ₽</div>
           <ul>
             <li>✔ Всё из «С Нуля» +</li>
             <li>✔ Проверка домашних заданий (2 раза в неделю)</li>
@@ -220,46 +593,50 @@
             <li>✔ Доп. материалы (музыка, плейлисты)</li>
             <li>✔ Диплом о прохождении курса</li>
           </ul>
-          <div style="margin-top:12px"><a class="btn btn-grad" href="#apply">Выбрать</a></div>
+          <div style="margin-top:12px">
+            <a class="btn btn-grad" href="#apply">Выбрать</a>
+          </div>
         </div>
         <div class="price">
           <div class="title">ТАРИФ «ПРЕМИУМ»</div>
-          <div class="amount">7 990 ₽</div>
+          <div class="amount">7 990 ₽</div>
           <ul>
             <li>✔ Всё из «Профи» + персональная консультация</li>
             <li>✔ Индивидуальный план развития</li>
             <li>✔ Приоритетная проверка (24 часа)</li>
-            <li>✔ Закрытые мастер‑классы</li>
+            <li>✔ Закрытые мастер-классы</li>
             <li>✔ Пожизненный доступ</li>
             <li>✔ Персональные рекомендации по стилю</li>
           </ul>
-          <div style="margin-top:12px"><a class="btn btn-grad" href="#apply">Выбрать</a></div>
+          <div style="margin-top:12px">
+            <a class="btn btn-grad" href="#apply">Выбрать</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Reviews -->
+  <!-- Отзывы -->
   <section id="reviews">
     <div class="wrap">
       <h2>Отзывы</h2>
       <div class="cards cols-3">
-        <div class="card">Удивительно, как быстро стало получаться!</div>
-        <div class="card">Наконец почувствовала себя красивой в движении.</div>
-        <div class="card">Удобно учиться дома и в своём темпе.</div>
+        <div class="card">Удивительно, как быстро стало получаться — уже с первого модуля чувствую себя смелее.</div>
+        <div class="card">Наконец почувствовала себя красивой в движении, а не «деревянной».</div>
+        <div class="card">Удобно учиться дома и в своём темпе — пересматриваю, когда нужно.</div>
       </div>
     </div>
   </section>
 
-  <!-- Important info -->
+  <!-- Важная информация -->
   <section id="info">
     <div class="wrap">
       <h2>Важная информация</h2>
       <ul class="details">
-        <li>Способы оплаты: карта, рассрочка (Сбер, Т‑банк), Сплит</li>
-        <li>Доступ ко всем обновлениям без ограничений по времени</li>
-        <li>Поддержка в чате по технике и организации занятий</li>
-        <li>Можно оформить бумажный оригинал сертификата по запросу</li>
+        <li>Способы оплаты: карта, рассрочка (Сбер, Т-банк), сплит-оплата.</li>
+        <li>Доступ ко всем материалам и обновлениям без ограничения по времени.</li>
+        <li>Поддержка в чате по технике и организации занятий.</li>
+        <li>Можно оформить бумажный оригинал сертификата по запросу.</li>
       </ul>
     </div>
   </section>
@@ -269,28 +646,65 @@
     <div class="wrap">
       <h2>Ответы на частые вопросы</h2>
       <div class="faq">
-        <details><summary><strong>Что входит в курс?</strong></summary><div class="muted">6 модулей: база jazz‑funk, музыкальность, техника/пластика, импровизация, связки, итоговая работа.</div></details>
-        <details><summary><strong>Подходит ли для новичка?</strong></summary><div class="muted">Да, подойдёт даже если «никогда не танцевала/не танцевал».</div></details>
-        <details><summary><strong>Кому подойдёт?</strong></summary><div class="muted">1) Кто мечтает красиво двигаться; 2) Танцевал в юности и хочет вернуться; 3) Хочет проживать эмоции через движение; 4) Ищет хобби и комьюнити; 5) Начинающие танцоры и подтанцовка.</div></details>
-        <details><summary><strong>Могут ли заниматься мужчины?</strong></summary><div class="muted">Да, курс открыт для всех.</div></details>
-        <details><summary><strong>Как проходят уроки? В какое время?</strong></summary><div class="muted">Уроки в записи. Занимайтесь в любое удобное время.</div></details>
-        <details><summary><strong>Что нужно чтобы начать?</strong></summary><div class="muted">Удобная одежда, немного пространства и желание двигаться.</div></details>
-        <details><summary><strong>Есть ли рассрочка / способы оплаты?</strong></summary><div class="muted">Да: карта, рассрочка (Сбер, Т‑банк), Сплит.</div></details>
-        <details><summary><strong>Если не понравится?</strong></summary><div class="muted">Возможен возврат — напишите нам в течение гарантийного срока.</div></details>
-        <details><summary><strong>Есть ли пробный период?</strong></summary><div class="muted">Есть демо‑материалы; по акциям — пробный модуль.</div></details>
-        <details><summary><strong>Могу ли сменить тариф?</strong></summary><div class="muted">Да, можно доплатить разницу и перейти на более высокий тариф.</div></details>
+        <details>
+          <summary><strong>Что входит в курс?</strong></summary>
+          <div class="muted">6 модулей: база jazz-funk, музыкальность, техника/пластика, импровизация, связки, итоговая работа.</div>
+        </details>
+        <details>
+          <summary><strong>Подходит ли для новичка?</strong></summary>
+          <div class="muted">Да, подойдёт даже если вы никогда не танцевали — всё объясняется с нуля.</div>
+        </details>
+        <details>
+          <summary><strong>Кому подойдёт?</strong></summary>
+          <div class="muted">
+            1) Кто сидит на вечеринках и мечтает красиво двигаться; 2) Кто танцевал в юности и хочет вернуть чувство свободы;
+            3) Кто сдерживает эмоции и хочет безопасный способ их проживать; 4) Кто ищет хобби и комьюнити единомышленников;
+            5) Начинающие танцоры и подтанцовка для артистов/клипов.
+          </div>
+        </details>
+        <details>
+          <summary><strong>Могут ли заниматься мужчины?</strong></summary>
+          <div class="muted">
+            Да, конечно. Мужчин как раз очень не хватает: танцы помогают снять зажимы, улучшить координацию, разогнать кровь,
+            сделать тело более гибким и выносливым.
+          </div>
+        </details>
+        <details>
+          <summary><strong>Как проходят уроки? В какое время?</strong></summary>
+          <div class="muted">Уроки в записи. Вы занимаетесь в любое время и в своём темпе.</div>
+        </details>
+        <details>
+          <summary><strong>Что нужно, чтобы начать?</strong></summary>
+          <div class="muted">Немного свободного места, удобная одежда, телефон/ноутбук и желание двигаться.</div>
+        </details>
+        <details>
+          <summary><strong>Есть ли рассрочка / способы оплаты?</strong></summary>
+          <div class="muted">Да, можно оплатить картой, в рассрочку через банк или сплит-платежом.</div>
+        </details>
+        <details>
+          <summary><strong>Если не понравится?</strong></summary>
+          <div class="muted">Есть возможность возврата — просто напишите нам в течение оговорённого срока.</div>
+        </details>
+        <details>
+          <summary><strong>Есть ли пробный период?</strong></summary>
+          <div class="muted">Иногда мы даём доступ к демо-урокам или первому модулю по акциям.</div>
+        </details>
+        <details>
+          <summary><strong>Могу ли сменить тариф?</strong></summary>
+          <div class="muted">Да, вы можете доплатить разницу и перейти на более высокий тариф.</div>
+        </details>
       </div>
     </div>
   </section>
 
-  <!-- Apply -->
+  <!-- Форма заявки -->
   <section id="apply">
     <div class="wrap">
       <h2>Оставить заявку</h2>
       <form class="grid" style="gap:10px;max-width:720px">
-        <input placeholder="Ваше имя" style="background:transparent;border:1px solid var(--line);border-radius:14px;padding:12px;color:var(--text)"/>
-        <input placeholder="Телефон" style="background:transparent;border:1px solid var(--line);border-radius:14px;padding:12px;color:var(--text)"/>
-        <input placeholder="E‑mail" style="background:transparent;border:1px solid var(--line);border-radius:14px;padding:12px;color:var(--text)"/>
+        <input placeholder="Ваше имя" style="background:transparent;border:1px solid var(--line);border-radius:14px;padding:12px;color:var(--text)" />
+        <input placeholder="Телефон" style="background:transparent;border:1px solid var(--line);border-radius:14px;padding:12px;color:var(--text)" />
+        <input placeholder="E-mail" style="background:transparent;border:1px solid var(--line);border-radius:14px;padding:12px;color:var(--text)" />
         <textarea placeholder="Комментарий (по желанию)" style="background:transparent;border:1px solid var(--line);border-radius:14px;padding:12px;height:120px;color:var(--text)"></textarea>
         <label style="display:flex;align-items:flex-start;gap:8px;color:var(--muted);font-size:14px">
           <input type="checkbox" style="accent-color:var(--accent);margin-top:4px">
@@ -302,11 +716,11 @@
     </div>
   </section>
 
-  <!-- Gift -->
+  <!-- Подарить -->
   <section id="gift">
     <div class="wrap">
       <h2>Подарить курс</h2>
-      <p class="p">Оформите подарок — мы пришлём сертификат и инструкции на e‑mail получателя сразу после оплаты.</p>
+      <p class="p">Оформите подарок — мы пришлём сертификат и инструкции на e-mail получателя сразу после оплаты.</p>
       <a class="btn btn-grad" href="#pricing">Выбрать тариф</a>
     </div>
   </section>
@@ -318,18 +732,22 @@
       <div style="font-weight:700">
         <a class="uline" href="https://t.me/Yulia_KokSta" target="_blank" rel="noopener">Юлия КокСта @Yulia_KokSta</a> · JazzFunk.Academy
       </div>
-      <p class="muted" style="margin:8px 0 0 0">ИП: реквизиты для оферты и договора-оферты. Политика конфиденциальности. © <span id="yr"></span></p>
+      <p class="muted" style="margin:8px 0 0 0">
+        ИП: реквизиты для оферты и договора-оферты. Политика конфиденциальности. © <span id="yr"></span>
+      </p>
     </div>
     <div>
       <div style="font-weight:700">Контакты</div>
-      <p class="muted" style="margin:8px 0 0 0">E‑mail: hello@example.com</p>
-      <p class="muted">Телеграм: <a class="uline" href="https://t.me/Yulia_KokSta" target="_blank" rel="noopener">@Yulia_KokSta</a></p>
+      <p class="muted" style="margin:8px 0 0 0">E-mail: y.koksta.online@mail.ru</p>
+      <p class="muted">
+        Телеграм: <a class="uline" href="https://t.me/Yulia_KokSta" target="_blank" rel="noopener">@Yulia_KokSta</a>
+      </p>
     </div>
   </div>
 </footer>
 
 <script>
-  // nav open/close with body class
+  // nav open/close
   const body = document.body;
   const hamb = document.getElementById('hamb');
   const drawer = document.getElementById('drawer');
@@ -345,7 +763,26 @@
   drawer.addEventListener('click', (e)=>{
     const t = e.target; if(t.tagName === 'A'){ toggleNav(false); }
   });
-  // year
+
+  // about read more toggle
+  const aboutLink = document.querySelector('.about-read-more');
+  const aboutMore = document.querySelector('.about-more');
+  if (aboutLink && aboutMore) {
+    aboutLink.addEventListener('click', function(e){
+      e.preventDefault();
+      const isHidden = aboutMore.hasAttribute('hidden');
+      if (isHidden) {
+        aboutMore.removeAttribute('hidden');
+        aboutLink.textContent = 'Свернуть историю';
+      } else {
+        aboutMore.setAttribute('hidden','hidden');
+        aboutLink.textContent = 'Читать полностью';
+        aboutLink.scrollIntoView({behavior:'smooth', block:'center'});
+      }
+    });
+  }
+
+  // год в футере
   document.getElementById('yr').textContent = new Date().getFullYear();
 </script>
 </body>
